@@ -3,6 +3,30 @@
     <h1>
     Primera plantilla
     </h1>
-    <p>Escrita por {{nombre_persona}} {{apellido_persona}} y lo estas viendo el {{momento_actual.date}}</p>
-    </body>
+
+    {% comment %}
+     No temas diseñador! 
+        ignora esta parte#
+    {% endcomment %}
+    {% if nombre_persona == "Carlos" %}
+        <p>El curso fue segudido por carlos</p>
+    {% else %}
+        <p>No seguiste este curso</p>
+    {% endif %}
+
+    <p>Escrita por {{nombre_persona|upper}} {{apellido_persona.upper}} y lo estas viendo el {{momento_actual.date}}</p>
+    <p><strong>Temas del curso:</strong></p>
+    <p>
+        <ul>
+        {% if temas %}
+            {% for tema in temas %}
+                <li>{{tema}}</li>  
+            {% endfor %}
+        {% else %}
+            <p>No hay elementos que mostrar</p>
+        {% endif %}
+        </ul>
+    </p>
+    
+</body>
     </html>
