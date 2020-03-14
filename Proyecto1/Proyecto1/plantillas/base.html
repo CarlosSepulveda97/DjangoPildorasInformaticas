@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <title>
+        {% block title %}{% endblock %}
+    </title>
+</head>
+
+
+<body style="background-color: white;">
+    <h1 style="background-color: aquamarine;color: rgb(87, 63, 63);">Pildoras Informaticas</h1>
+    {% include "top/barra.html" %}
+    <h3>Curso de programacion</h3>
+
+    {% block content %}{% endblock %}
+
+    <p style="background-color: aquamarine;color: rgb(87, 63, 63);align-it;text-align: right;">
+        Cursos gratuitos. Gracias por su visita
+    </p>
+
+</body>
+
+</html>
