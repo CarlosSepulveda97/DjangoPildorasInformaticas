@@ -19,6 +19,8 @@ from .views import *
 
 
 urlpatterns = [
+    path('cursoCss/', cursoCss),
+    path('cursoC/', cursoC),
     path('edades/<int:edad>/<int:anio>', calcularEdad),
     path('fecha/', dameFecha),
     path('despedida/', despedida),
